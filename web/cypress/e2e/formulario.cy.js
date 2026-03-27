@@ -30,6 +30,8 @@ describe('template spec', ()=> {
             cy.contains('label', item).find('input').check().should('be.checked')
         })
 
+        cy.get('input[type="file"]').selectFile('./cypress/fixtures/header.png',{force: true})
+
         cy.get('#details').type('Sou traficante do amor')
 
     })
