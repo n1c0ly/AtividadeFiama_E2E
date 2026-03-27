@@ -33,6 +33,11 @@ describe('template spec', ()=> {
         cy.get('input[type="file"]').selectFile('./cypress/fixtures/header.png',{force: true})
 
         cy.get('#details').type('Sou traficante do amor')
+         cy.get('#technologies').type('React{enter}Node.js{enter}Spring{enter}MongoDB{enter}')
 
     })
 })
+
+
+
+
