@@ -33,7 +33,9 @@ describe('template spec', ()=> {
         cy.get('input[type="file"]').selectFile('./cypress/fixtures/header.png',{force: true})
 
         cy.get('#details').type('Sou traficante do amor')
-         cy.get('#technologies').type('React{enter}Node.js{enter}Spring{enter}MongoDB{enter}')
+             cy.get('#technologies').type('JavaScript {enter}').should('be.visible', 'JavaScript')
+    cy.contains('label', 'Li e aceito os').find('input').check().should('be.checked')
+    cy.contains('button', 'Enviar formulário').click()
 
     })
 })
